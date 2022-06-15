@@ -35,7 +35,7 @@ enum LE_COMMAND {
   ENCRYPT                      = 0x0017,
   RANDOM                       = 0x0018,
   LONG_TERM_KEY_REPLY          = 0x001A,
-  LONG_TERM_KEY_NEGATIVE_REPLY = 0x001B,
+  LONG_TERM_KEY_NEGATIVE_REPLY = 0x1B,
   READ_LOCAL_P256              = 0x0025,
   GENERATE_DH_KEY_V1           = 0x0026,
   GENERATE_DH_KEY_V2           = 0x005E
@@ -46,7 +46,8 @@ enum LE_META_EVENT {
   LONG_TERM_KEY_REQUEST     = 0x05,
   REMOTE_CONN_PARAM_REQ     = 0x06,
   READ_LOCAL_P256_COMPLETE  = 0x08,
-  GENERATE_DH_KEY_COMPLETE  = 0x09
+  GENERATE_DH_KEY_COMPLETE  = 0x09,
+  CONN_STARTER              = 0x0A
 };
 String metaEventToString(LE_META_EVENT event);
 String commandToString(LE_COMMAND command);
